@@ -1,11 +1,11 @@
 variable "region" {
-  default     = "us-east-2"
+  default     = "eu-west-1"
   description = "AWS region"
 }
 
 provider "aws" {
   version = ">= 2.28.1"
-  region  = "us-east-2"
+  region  = var.region
 }
 
 data "aws_availability_zones" "available" {}
